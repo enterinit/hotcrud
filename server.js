@@ -16,7 +16,7 @@ const db = knex({
 });
 var http = require("http");
 const app = express();
-
+app.use(express.static(__dirname))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
